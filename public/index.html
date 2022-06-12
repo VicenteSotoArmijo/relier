@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <link rel="shortcut icon" href="" />
+    <link rel="stylesheet" href="">
     <link
       rel="apple-touch-icon"
       sizes="76x76"
@@ -18,6 +19,15 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css"
     />
+    <link
+    href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+  <!--  Swiper's CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+  />
     <title>Relier</title>
   </head>
   <body class="text-gray-800 antialiased">
@@ -186,7 +196,7 @@
             </div>
           </div>
           <div class="container mx-auto px-4">
-            <div class="row justify-center">
+            <div class="flex justify-center">
               <div class="w-full lg:w-1/2 px-4 py-5 flex-auto mt-32">
                 <div class="section_title text-center pb-6">
                   <h5 class="text-xl font-semibold">Sobre nosotros</h5>
@@ -254,60 +264,52 @@
         </div> 
         
         <div class="flex flex-wrap items-center">
-          <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
-            <div
-              class="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100"
-            >
+          <div class="md:w-4/12 px-4 mr-auto ml-auto">
+            <div class="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100" >
               <i class="fas fa-user-friends text-xl"></i>
             </div>
-            <h3 class="text-3xl mb-2 font-semibold leading-normal">
-              Tenemos apoyo!
-            </h3>
-            <p
-              class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700"
-            >
+            <h3 class="text-3xl mb-2 font-semibold leading-normal"> Tenemos apoyo! </h3>
+            <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
               Sabemos que para lograr nuestra meta necesitamos alianzas y apoyos claves con distintos participantes del ecosistema.
-            </p>
-            <p
-              class="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700"
-            >
-              Contamos oficialmente con nuestro primer gran apoyo, Incuba UC, quienes nos entregaran distintos tipos de herramientas para 
-              materializar nuestra visión.
             </p>
             <p class="font-bold text-gray-800 mt-8">
               Gracias!
             </p>
           </div>
-          <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
-            <div
-              class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-blue-500"
-            >
-              <img
-                alt="..."
-                src="./incubauc.png";ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1051&amp;q=80"
-                class="w-full align-middle rounded-t-lg"
-              />
-              <!-- <blockquote class="relative p-8 mb-4">
-                <svg
-                  preserveAspectRatio="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 583 95"
-                  class="absolute left-0 w-full block"
-                  style="height: 95px; top: -94px;"
-                >
-                  <polygon
-                    points="-30,95 583,95 583,65"
-                    class="text-blue-500 fill-current"
-                  ></polygon>
-                </svg>
-                <h4 class="text-xl font-bold text-white">
-                  Incuba UC
-                </h4>
-                <p class="text-md font-light mt-2 text-white">
-                  Programa de apoyo al emprendimiento del Centro de Innovación de la Ponitificia Universidad Católica de Chile
-                </p>
-              </blockquote> -->
+          <div class="swiper mySwiper carousel slide relative md:w-6/12 px-4 mr-auto ml-auto carousel-inner overflow-hidden ">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide flex h-screen justify-center">
+                <div class="carousel-caption hidden md:block absolute text-center">
+                  <h5 class="text-xl font-bold text-gray-800">Incuba UC</h5>
+                  <br>
+                  <p>Programa de aceleración de la Pontifica Universidad Católica de Chile para proyectos basados en I+D.</p>
+                </div>
+                <a href="https://incubauc.cl/" target="_blank"> 
+                  <img
+                  class="mx-auto object-cover h-96"
+                  src="./incubauc.png"
+                  alt="image"
+                />
+                </a>
+              </div>
+              <div class="swiper-slide flex h-screen justify-center">
+                <div class="carousel-caption hidden md:block absolute text-center">
+                  <h5 class="text-xl font-bold text-gray-800">Tu idea, la hacemos realidad - Municipalidad de las Condes</h5>
+                  <br>
+                
+                  <p>Iniciativa que busca apoyar económicamente proyectos para que puedan desarrollarse.</p>
+                </div>
+                <a href="https://www.lascondes.cl/" target="_blank">
+                  <img
+                  class="mx-auto object-cover h-96"
+                  src="./img/pruebalascondes.jpeg"
+                  alt="image"
+                />
+                </a>
+              </div>
             </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
         </div>
       </section>
@@ -799,82 +801,6 @@
               </button>
             </div>
           </div>
-          <!-- <div class="w-full lg:w-6/12 px-4">
-            <div class="flex flex-wrap items-top mb-6">
-              <div class="w-full lg:w-4/12 px-4 ml-auto">
-                <span
-                  class="block uppercase text-gray-600 text-sm font-semibold mb-2"
-                  >Links útiles</span
-                >
-                <ul class="list-unstyled">
-                  <li>
-                    <a
-                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="https://www.creative-tim.com/presentation"
-                      >About Us</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="https://blog.creative-tim.com"
-                      >Blog</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="https://www.github.com/creativetimofficial"
-                      >Github</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="https://www.creative-tim.com/bootstrap-themes/free"
-                      >Free Products</a
-                    >
-                  </li>
-                </ul>
-              </div>
-              <div class="w-full lg:w-4/12 px-4">
-                <span
-                  class="block uppercase text-gray-600 text-sm font-semibold mb-2"
-                  >Other Resources</span
-                >
-                <ul class="list-unstyled">
-                  <li>
-                    <a
-                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="https://github.com/creativetimofficial/argon-design-system/blob/master/LICENSE.md"
-                      >MIT License</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="https://creative-tim.com/terms"
-                      >Terms &amp; Conditions</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="https://creative-tim.com/privacy"
-                      >Privacy Policy</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="https://creative-tim.com/contact-us"
-                      >Contact Us</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div> -->
         </div>
         <hr class="my-6 border-gray-400" />
         <div
@@ -889,10 +815,13 @@
       </div>
     </footer>
   </body>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
-    function toggleNavbar(collapseID) {
-      document.getElementById(collapseID).classList.toggle("hidden");
-      document.getElementById(collapseID).classList.toggle("block");
-    }
+    var swiper = new Swiper('.mySwiper', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
   </script>
 </html>
